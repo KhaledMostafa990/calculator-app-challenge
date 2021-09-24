@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--desaturated-blue-main-background-1);
+  max-height: 100%;
+  max-width: 100%;
+
+  font-size: 1.6rem;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* varibles */
+
+:root {
+  /* Backgrounds */
+  --desaturated-blue-main-background-1: hsl(222, 26%, 31%);
+  --desaturated-blue-toggle-keypad-background-1: hsl(223, 31%, 20%);
+  --desaturated-blue-screen-background-1: hsl(224, 36%, 15%);
+  /*  Keys */
+
+  --dark-violet-key-background: hsl(281, 89%, 26%);
+  --vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+
+  --pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
+  --soft-cyan-key-shadow: hsl(177, 92%, 70%);
+
+  --very-dark-violet-key-background: hsl(268, 47%, 21%);
+  --dark-magenta-key-shadow-: hsl(290, 70%, 36%);
+
+  /*  Text */
+
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
+  --white: rgb(255, 255, 255);
+}
+
+/* Main app styles */
+.app {
+  border: 0.05rem solid red;
+
+  height: 60rem;
+  width: 32.5rem;
+  max-height: 60rem;
+  max-width: 32.5rem;
+}
+
+.header-app {
+  /* border: 0.1rem solid blue; */
+
+  width: 100%;
+  height: 5rem;
+  max-height: 5rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2.6rem;
+}
+.logo {
+  flex: 1 0 0;
+}
+.logo h1 {
+  color: var(--white);
+  font-size: 3.1rem;
+  padding-top: 0.35rem;
+}
+.themes {
+  height: 100%;
+
+  flex: 1 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.theme-header {
+  height: 100%;
+  flex-basis: 56%;
+}
+.themes h5 {
+  color: var(--white);
+  position: relative;
+  left: 2rem;
+  top: 2.5rem;
+  font-size: 1.2rem;
+}
+.themes-options {
+  flex-basis: 44%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme-num {
+  /* flex-basis: 50%; */
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.theme-num h6 {
+  font-size: 1.1rem;
+  color: var(--white);
+}
+.theme-button {
+  width: 100%;
+  /* flex-basis: 62%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5rem;
+  background-color: var(--desaturated-blue-toggle-keypad-background-1);
+  padding: 0 0.5rem;
+  max-height: 2.5rem;
+  height: 100%;
+  position: relative;
+  top: -0.6rem;
+}
+.th-btns {
+  background-color: red;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  scale: 1.2;
+}
+
+.screen-app {
+  border: 0.1rem solid orange;
+  background-color: var(--desaturated-blue-screen-background-1);
+  width: 100%;
+  height: 8.6rem;
+
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.6rem;
+}
+
+.options-app {
+  border: 0.1rem solid cadetblue;
+  width: 100%;
+  height: 41.1rem;
+}
+.calc-container {
+  border: 0.1rem solid seagreen;
+
+  width: 100%;
+  height: 100%;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.calc-options {
+  border: 0.1rem solid blueviolet;
+
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1.2rem;
+}
+.calc-and-reset-options {
+  border: 0.1rem solid skyblue;
+
+  width: 100%;
+  height: 16.5%;
+}
