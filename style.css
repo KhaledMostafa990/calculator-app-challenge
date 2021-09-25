@@ -37,27 +37,27 @@ body {
   --desaturated-blue-main-background-1: hsl(222, 26%, 31%);
   --desaturated-blue-toggle-keypad-background-1: hsl(223, 31%, 20%);
   --desaturated-blue-screen-background-1: hsl(224, 36%, 15%);
+
   /*  Keys */
+  --desaturated-dark-blue-key-background-1: hsl(225, 21%, 49%);
+  --dark-blue-key-shadow-1: hsl(224, 28%, 35%);
 
-  --dark-violet-key-background: hsl(281, 89%, 26%);
-  --vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+  --red-key-background-toggle-1: hsl(6, 63%, 50%);
+  --dark-red-key-shadow-1: hsl(6, 70%, 34%);
 
-  --pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
-  --soft-cyan-key-shadow: hsl(177, 92%, 70%);
-
-  --very-dark-violet-key-background: hsl(268, 47%, 21%);
-  --dark-magenta-key-shadow-: hsl(290, 70%, 36%);
+  --light-grayish-key-background-1: hsl(30, 25%, 89%);
+  --grayish-orange-key-shadow-1: hsl(28, 16%, 65%);
 
   /*  Text */
-
-  --light-yellow: hsl(52, 100%, 62%);
-  --very-dark-blue: hsl(198, 20%, 13%);
+  --very-dark-blue-1: hsl(221, 14%, 31%);
   --white: rgb(255, 255, 255);
+
+  /* --light-yellow: hsl(52, 100%, 62%); */
 }
 
 /* Main app styles */
 .app {
-  border: 0.05rem solid red;
+  /* border: 0.05rem solid red; */
 
   height: 60rem;
   width: 32.5rem;
@@ -75,7 +75,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 2.6rem;
+  margin-bottom: 2.9rem;
 }
 .logo {
   flex: 1 0 0;
@@ -83,7 +83,7 @@ body {
 .logo h1 {
   color: var(--white);
   font-size: 3.1rem;
-  padding-top: 0.35rem;
+  padding-top: 0.6rem;
 }
 .themes {
   height: 100%;
@@ -100,8 +100,8 @@ body {
 .themes h5 {
   color: var(--white);
   position: relative;
-  left: 2rem;
-  top: 2.5rem;
+  left: 2.2rem;
+  top: 2.8rem;
   font-size: 1.2rem;
 }
 .themes-options {
@@ -118,6 +118,9 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  position: relative;
+  top: 0.3rem;
+  left: 0.2rem;
 }
 .theme-num h6 {
   font-size: 1.1rem;
@@ -135,10 +138,10 @@ body {
   max-height: 2.5rem;
   height: 100%;
   position: relative;
-  top: -0.6rem;
+  top: -0.3rem;
 }
 .th-btns {
-  background-color: red;
+  background-color: var(--red-key-background-toggle-1);
   height: 1.3rem;
   width: 1.3rem;
   border-radius: 50%;
@@ -146,43 +149,108 @@ body {
 }
 
 .screen-app {
-  border: 0.1rem solid orange;
+  /* border: 0.1rem solid orange; */
   background-color: var(--desaturated-blue-screen-background-1);
   width: 100%;
   height: 8.6rem;
-
   padding: 2rem 2.5rem;
   margin-bottom: 2.6rem;
+  border-radius: 1rem;
 }
 
-.options-app {
-  border: 0.1rem solid cadetblue;
+.screen-inputs {
   width: 100%;
-  height: 41.1rem;
+  height: 100%;
+}
+.screen-input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.options-app {
+  /* border: 0.1rem solid cadetblue; */
+  background-color: var(--desaturated-blue-toggle-keypad-background-1);
+  width: 100%;
+  height: 41.3rem;
+  border-radius: 0.1rem;
 }
 .calc-container {
-  border: 0.1rem solid seagreen;
+  /* border: 0.1rem solid seagreen; */
 
   width: 100%;
   height: 100%;
-  padding: 2rem 2rem;
+  padding: 2.2rem 2.25rem 1.5rem 2.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .calc-options {
-  border: 0.1rem solid blueviolet;
+  /* border: 0.1rem solid blueviolet; */
 
   width: 100%;
-  height: 80%;
+  height: 78%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-gap: 1.2rem;
+  grid-row-gap: 1.2rem;
+  grid-column-gap: 1.2rem;
+}
+.btn div {
+  color: var(--white);
+}
+.btn {
+  background-color: var(--light-grayish-key-background-1);
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc-options button:nth-of-type(4) {
+  background-color: var(--desaturated-dark-blue-key-background-1);
+}
+.num {
+  font-size: 3.2rem;
+  position: relative;
+  top: -0.2rem;
+}
+.calc-options button div {
+  color: var(--very-dark-blue-1);
+  font-weight: 700;
+}
+.calc-options button:nth-of-type(4) div {
+  color: var(--white);
+  position: relative;
+  top: -0.35rem;
+  font-size: 1.8rem;
 }
 .calc-and-reset-options {
-  border: 0.1rem solid skyblue;
+  /* border: 0.1rem solid skyblue; */
 
   width: 100%;
   height: 16.5%;
+  position: relative;
+  top: -0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reset,
+.calc {
+  height: 100%;
+  flex: 0 0 48%;
+  font-weight: 700;
+}
+.calc div,
+.reset div {
+  position: relative;
+  top: -0.3rem;
+}
+.reset {
+  background-color: var(--desaturated-dark-blue-key-background-1);
+  font-size: 1.8rem;
+}
+.calc {
+  background-color: var(--red-key-background-toggle-1);
+  font-size: 1.7rem;
 }
