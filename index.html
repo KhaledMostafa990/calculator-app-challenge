@@ -17,7 +17,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="main-body">
     <main class="app">
       <!-- Header -->
       <header class="header-app">
@@ -33,7 +33,7 @@
             </div>
 
             <div class="theme-button">
-              <button class="theme-btn-1 th-btns"></button>
+              <button class="theme-btn-1 th-btns th-active"></button>
               <button class="theme-btn-2 th-btns"></button>
               <button class="theme-btn-3 th-btns"></button>
             </div>
@@ -44,7 +44,9 @@
       <!-- Screen -->
       <section class="screen-app">
         <div class="screen-inputs">
-          <input type="" class="screen-input" id="screen-input" />
+          <div class="screen-input " id="screen-input1">399,981</div>
+          <div class="screen-input " id="screen-input2"></div>
+          <!-- <div class="screen-input " id="screen-result">result</div> -->
         </div>
       </section>
 
@@ -52,27 +54,27 @@
       <section class="options-app">
         <div class="calc-container">
           <div class="calc-options">
-            <button class="btn"><div class="num">7</div></button>
-            <button class="btn"><div class="num">8</div></button>
-            <button class="btn"><div class="num">9</div></button>
-            <button class="btn"><div class="option">DEL</div></button>
-            <button class="btn"><div class="num">4</div></button>
-            <button class="btn"><div class="num">5</div></button>
-            <button class="btn"><div class="num">6</div></button>
-            <button class="btn"><div class="option">+</div></button>
-            <button class="btn"><div class="num">1</div></button>
-            <button class="btn"><div class="num">2</div></button>
-            <button class="btn"><div class="num">3</div></button>
-            <button class="btn"><div class="option">-</div></button>
-            <button class="btn"><div class="option">.</div></button>
-            <button class="btn"><div class="num">0</div></button>
-            <button class="btn"><div class="option">/</div></button>
-            <button class="btn"><div class="option">x</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">7</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">8</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">9</div></button>
+            <button class="btn btn-op btn-ac"><div class="btn-op btn-ac option">DEL</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">4</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">5</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">6</div></button>
+            <button class="btn btn-op btn-ac"><div class="btn-op btn-ac option">+</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">1</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">2</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">3</div></button>
+            <button class="btn btn-op btn-ac"><div class="btn-op btn-ac option">-</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num option">.</div></button>
+            <button class="btn btn-op btn-num"><div class="btn-op btn-num num">0</div></button>
+            <button class="btn btn-op btn-ac"><div class="btn-op btn-ac option">/</div></button>
+            <button class="btn btn-op btn-ac"><div class="btn-op btn-ac option">x</div></button>
           </div>
 
           <div class="calc-and-reset-options">
-            <button class="btn reset"><div>RESET</div></button>
-            <button class="btn calc"><div>=</div></button>
+            <button class="btn reset btn-op btn-ac"><div class="btn-op btn-ac">RESET</div></button>
+            <button class="btn calc btn-op btn-ac"><div class="btn-op btn-ac">=</div></button>
           </div>
         </div>
       </section>
@@ -82,5 +84,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+    <!-- <script scr="script.js"></script> -->
+    <script src="script.js"></script>
   </body>
 </html>

@@ -19,10 +19,10 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-color: var(--desaturated-blue-main-background-1);
   max-height: 100%;
   max-width: 100%;
-
+  width: 100%;
+  height: 100vh;
   font-size: 1.6rem;
   font-family: "Spartan", sans-serif;
   font-weight: 700;
@@ -30,15 +30,33 @@ body {
   align-items: center;
   justify-content: center;
 }
+.main-body {
+  background-color: var(--desaturated-blue-main-background-1);
+}
+.main-body-2 {
+  background-color: var(--light-gray-main-background-2);
+}
+.main-body-3 {
+  background-color: var(--very-dark-main-background-3);
+}
 /* varibles */
 
 :root {
-  /* Backgrounds */
+  /* Backgrounds 1*/
   --desaturated-blue-main-background-1: hsl(222, 26%, 31%);
   --desaturated-blue-toggle-keypad-background-1: hsl(223, 31%, 20%);
   --desaturated-blue-screen-background-1: hsl(224, 36%, 15%);
 
-  /*  Keys */
+  /* Backgrounds 2*/
+  --light-gray-main-background-2: hsl(0, 0%, 90%);
+  --grayish-red-toggle-keypad-background-2: hsl(0, 5%, 81%);
+  --very-light-gray-screen-background-2: hsl(0, 0%, 93%);
+
+  /* Backgrounds 3*/
+  --very-dark-main-background-3: hsl(268, 75%, 9%);
+  --very-dark-toggle-keypad-background-screen-3: hsl(268, 71%, 12%);
+
+  /*  Keys 1*/
   --desaturated-dark-blue-key-background-1: hsl(225, 21%, 49%);
   --dark-blue-key-shadow-1: hsl(224, 28%, 35%);
 
@@ -48,11 +66,32 @@ body {
   --light-grayish-key-background-1: hsl(30, 25%, 89%);
   --grayish-orange-key-shadow-1: hsl(28, 16%, 65%);
 
+  /*  Keys 2*/
+  --dark-moderate-cyan-key-background-2: hsl(185, 42%, 37%);
+  --very-dark-cyan-key-shadow-2: hsl(185, 58%, 25%);
+
+  --orange-key-background-toggle-2: hsl(25, 98%, 40%);
+  --dark-orange-key-shadow-2: hsl(25, 99%, 27%);
+
+  --light-grayish-yellow-key-background-2: hsl(45, 7%, 89%);
+  --dark-grayish-orange-key-shadow-2: hsl(35, 11%, 61%);
+
+  /*  Keys 3*/
+  --dark-violet-cyan-key-background-2: hsl(281, 89%, 26%);
+  --vivid-magenta-key-shadow-2: hsl(285, 91%, 52%);
+
+  --pure-cyan-key-background-toggle-2: hsl(176, 100%, 44%);
+  --soft-cyan-key-shadow-2: hsl(177, 92%, 70%);
+
+  --very-dark-key-background-2: hsl(268, 47%, 21%);
+  --dark-magenta-key-shadow-2: hsl(290, 70%, 36%);
+
   /*  Text */
   --very-dark-blue-1: hsl(221, 14%, 31%);
+  --very-dark-grayish-txt-2: hsl(60, 10%, 19%);
+  --light-yellow-txt-3: hsl(52, 100%, 62%);
+  --very-dark-blue-txt-3: hsl(198, 20%, 13%);
   --white: rgb(255, 255, 255);
-
-  /* --light-yellow: hsl(52, 100%, 62%); */
 }
 
 /* Main app styles */
@@ -64,7 +103,6 @@ body {
   max-height: 60rem;
   max-width: 32.5rem;
 }
-
 .header-app {
   /* border: 0.1rem solid blue; */
 
@@ -140,8 +178,15 @@ body {
   position: relative;
   top: -0.3rem;
 }
-.th-btns {
-  background-color: var(--red-key-background-toggle-1);
+.theme-button button {
+  background-color: transparent;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  scale: 1.2;
+}
+.th-active {
+  background-color: var(--red-key-background-toggle-1) !important;
   height: 1.3rem;
   width: 1.3rem;
   border-radius: 50%;
@@ -157,15 +202,29 @@ body {
   margin-bottom: 2.6rem;
   border-radius: 1rem;
 }
-
 .screen-inputs {
   width: 100%;
   height: 100%;
+  position: relative;
+  top: 0.5rem;
 }
 .screen-input {
   width: 100%;
   height: 100%;
   background-color: transparent;
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: right;
+  font-family: "Spartan", sans-serif;
+}
+#screen-input2 {
+  position: relative;
+  top: -4.5rem;
+}
+.calc-state {
+  text-align: left;
+  font-size: 1rem;
 }
 .options-app {
   /* border: 0.1rem solid cadetblue; */
@@ -204,14 +263,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px -3.5px 0 inset var(--grayish-orange-key-shadow-1);
 }
 .calc-options button:nth-of-type(4) {
   background-color: var(--desaturated-dark-blue-key-background-1);
+  box-shadow: 0px -3.5px 0 inset var(--dark-blue-key-shadow-1);
 }
 .num {
-  font-size: 3.2rem;
+  font-size: 3rem;
+  font-family: "Spartan", sans-serif;
   position: relative;
-  top: -0.2rem;
+  top: 0.2rem;
 }
 .calc-options button div {
   color: var(--very-dark-blue-1);
@@ -222,6 +284,9 @@ body {
   position: relative;
   top: -0.35rem;
   font-size: 1.8rem;
+}
+.btn:not(:nth-of-type(4)) .option {
+  font-size: 2.4rem;
 }
 .calc-and-reset-options {
   /* border: 0.1rem solid skyblue; */
@@ -248,9 +313,11 @@ body {
 }
 .reset {
   background-color: var(--desaturated-dark-blue-key-background-1);
+  box-shadow: 0px -3.5px 0 inset var(--dark-blue-key-shadow-1);
   font-size: 1.8rem;
 }
 .calc {
   background-color: var(--red-key-background-toggle-1);
+  box-shadow: 0px -3.5px 0 inset var(--dark-red-key-shadow-1);
   font-size: 1.7rem;
 }
