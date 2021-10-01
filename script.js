@@ -9,13 +9,12 @@ const secontUserInput = document.getElementById('screen-input2')
 
 const themesButtons = document.querySelectorAll('.th-btns');
 
+
 let firstValuePlus;
 let firstValueSubtract;
 let firstValueMultiply;
 let firstValueDevide;
 let secondValue;
-
-
 
 
 // helper funstion 
@@ -28,41 +27,115 @@ const removeClass = (elm,className)=>{
 }
 // listen for theme button
 
+let bodyBg = document.querySelector('body');
+let calcName = document.querySelector('.logo h1');
+let themeWord = document.querySelector('.themes h5');
+let themeNum = document.querySelectorAll('h6');
+let themeToggleBg = document.querySelector('.theme-button');
+let screenBg = document.querySelector('.screen-app');
+let screeninputs = document.querySelectorAll('.screen-input1')
+
+let keypadBg = document.querySelector('.options-app');
+let keyBtns = document.querySelectorAll('.btn')
+
+themesButtons[0].style.cssText = 'background-color: hsl(6, 63%, 50%);'
 themesButtons.forEach((button,indx,array) => {
   
   button.addEventListener('click', (e) => {
-    console.log(e.target);
-    
-    if (e.target.matches('.theme-btn-2')){
+    if (e.target.matches('.theme-btn-1')){
+      console.log('theme 1');
+      removeClass(array[0],('th-active'));
+      removeClass(array[1],('th-active'));
+      removeClass(array[2],('th-active'));
+      addClass(button,('th-active'));
+      bodyBg.style.cssText = 'background-color: hsl(222, 26%, 31%);'
+      calcName.style.cssText = 'color: white;'
+      themeWord.style.cssText = 'color: white;'
+      themeNum.forEach((element) => {
+        element.style.cssText = 'color: white;'
+      });
+      themeToggleBg.style.cssText = 'background-color: hsl(223, 31%, 20%);'
+      array[1].style.cssText = 'background-color: none;';
+      array[2].style.cssText = 'background-color: none;';
+      button.style.cssText = 'background-color: hsl(6, 63%, 50%);'
+      screenBg.style.cssText = 'background-color: hsl(224, 36%, 15%);'      
+      firstUserInput.style.cssText = 'color: white;'
+      secontUserInput.style.cssText = 'color: white;'            
+      keypadBg.style.cssText = 'background-color: hsl(223, 31%, 20%);'            
+      keyBtns.forEach((btn,indx,array)=>{
+        array[3].style.cssText = 'background-color: hsl(225, 21%, 49%); box-shadow: 0px -3.5px 0 inset hsl(224, 28%, 35%);'
+         btn.style.cssText = 'background-color:  hsl(30, 25%, 89%); box-shadow: 0px -3.5px 0 inset hsl(28, 16%, 65%);'
+         btn.firstElementChild.style.cssText = 'color: hsl(221, 14%, 31%)'         
+         array[3].firstElementChild.style.cssText = 'color: white'                  
+        array[16].style.cssText = 'background-color: hsl(225, 21%, 49%); box-shadow: 0px -3.5px 0 inset hsl(224, 28%, 35%);'                           
+        array[16].firstElementChild.style.cssText = 'color: white'                                   
+        array[17].style.cssText = 'background-color: hsl(6, 63%, 50%); box-shadow: 0px -3.5px 0 inset hsl(6, 70%, 34%);'                                           
+        array[17].firstElementChild.style.cssText = 'color: white'                                                   
+      })            
+    } else if (e.target.matches('.theme-btn-2')){
       console.log('theme 2');
-      removeClass(array[0],('th-active'))
-      removeClass(array[1],('th-active'))
-      removeClass(array[2],('th-active'))
-
-      addClass(button,('th-active'))
-
+      removeClass(array[0],('th-active'));
+      removeClass(array[1],('th-active'));
+      removeClass(array[2],('th-active'));
+      addClass(button,('th-active'));
+      bodyBg.style.cssText = 'background-color: hsl(0, 0%, 90%);'
+      calcName.style.cssText = 'color: hsl(60, 10%, 19%);'
+      themeWord.style.cssText = 'color: hsl(60, 10%, 19%);'
+      themeNum.forEach((element) => {
+        element.style.cssText = 'color: hsl(60, 10%, 19%);'
+      });
+      themeToggleBg.style.cssText = 'background-color: hsl(0, 5%, 81%);'
+      array[0].style.cssText = 'background-color: none;';
+      array[2].style.cssText = 'background-color: none;';
+      button.style.cssText = 'background-color: hsl(25, 98%, 40%);'
+      screenBg.style.cssText = 'background-color: hsl(0, 0%, 93%);'      
+      firstUserInput.style.cssText = 'color: hsl(60, 10%, 19%);'
+      secontUserInput.style.cssText = 'color: hsl(60, 10%, 19%);'           
+      keypadBg.style.cssText = 'background-color: hsl(0, 5%, 81%);'           
+      keyBtns.forEach((btn,indx,array)=>{
+        array[3].style.cssText = 'background-color: hsl(185, 42%, 37%); box-shadow: 0px -3.5px 0 inset hsl(185, 58%, 25%);'
+         btn.style.cssText = 'background-color: hsl(45, 7%, 89%); box-shadow: 0px -3.5px 0 inset hsl(35, 11%, 61%);'
+         btn.firstElementChild.style.cssText = 'color: hsl(60, 10%, 19%)'         
+         array[3].firstElementChild.style.cssText = 'color: white'                  
+        array[16].style.cssText = 'background-color: hsl(185, 42%, 37%); box-shadow: 0px -3.5px 0 inset hsl(185, 58%, 25%);'                          
+        array[16].firstElementChild.style.cssText = 'color: white'                                   
+        array[17].style.cssText = 'background-color: hsl(25, 98%, 40%); box-shadow: 0px -3.5px 0 inset hsl(25, 99%, 27%);'                                           
+        array[17].firstElementChild.style.cssText = 'color: white'                                                   
+      })           
 
     } else if (e.target.matches('.theme-btn-3')){
       console.log('theme 3');
-      removeClass(array[0],('th-active'))
-      removeClass(array[1],('th-active'))
-      removeClass(array[2],('th-active'))
-      addClass(button,('th-active'))
-
-
-    } else if (e.target.matches('.theme-btn-1')){
-      console.log('theme 1');
-      removeClass(array[0],('th-active'))
-      removeClass(array[1],('th-active'))
-      removeClass(array[2],('th-active'))
-      addClass(button,('th-active'))
-
-    }
+      removeClass(array[0],('th-active'));
+      removeClass(array[1],('th-active'));
+      removeClass(array[2],('th-active'));
+      addClass(button,('th-active'));
+      bodyBg.style.cssText = 'background-color: hsl(268, 75%, 9%);'
+      calcName.style.cssText = 'color: hsl(52, 100%, 62%);'
+      themeWord.style.cssText = 'color: hsl(52, 100%, 62%);'
+      themeNum.forEach( (element) => {
+        element.style.cssText = 'color: hsl(52, 100%, 62%);'
+      });
+      themeToggleBg.style.cssText = 'background-color: hsl(268, 71%, 12%);'
+      array[0].style.cssText = 'background-color: none;';
+      array[1].style.cssText = 'background-color: none;';
+      button.style.cssText = 'background-color: hsl(176, 100%, 44%);'
+      screenBg.style.cssText = 'background-color: hsl(268, 71%, 12%)'      
+      firstUserInput.style.cssText = 'color: hsl(52, 100%, 62%);'
+      secontUserInput.style.cssText = 'color: hsl(52, 100%, 62%);'           
+      keypadBg.style.cssText = 'background-color: hsl(268, 71%, 12%);'           
+      keyBtns.forEach((btn,indx,array)=>{
+        array[3].style.cssText = 'background-color: hsl(281, 89%, 26%); box-shadow: 0px -3.5px 0 inset hsl(285, 91%, 52%);'
+         btn.style.cssText = 'background-color: hsl(268, 47%, 21%); box-shadow: 0px -3.5px 0 inset hsl(290, 70%, 36%);'
+         btn.firstElementChild.style.cssText = 'color:  hsl(52, 100%, 62%)'         
+         array[3].firstElementChild.style.cssText = 'color: white'                  
+        array[16].style.cssText = 'background-color: hsl(281, 89%, 26%); box-shadow: 0px -3.5px 0 inset hsl(285, 91%, 52%);'                           
+        array[16].firstElementChild.style.cssText = 'color: white'                                   
+        array[17].style.cssText = 'background-color: hsl(176, 100%, 44%); box-shadow: 0px -3.5px 0 inset hsl(177, 92%, 70%);'                                           
+        array[17].firstElementChild.style.cssText = 'color: hsl(198, 20%, 13%)'                                                   
+      })           
+    } 
   });
-  // button.classList.remove('th-active')
 });
-
-
 
 
 
@@ -204,8 +277,6 @@ themesButtons.forEach((button,indx,array) => {
         
       } 
     });
-
-
 // document.addEventListener('keypress', (e) => {
     
 // });

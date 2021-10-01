@@ -19,6 +19,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  background-color: var(--desaturated-blue-main-background-1);
   max-height: 100%;
   max-width: 100%;
   width: 100%;
@@ -30,15 +31,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.main-body {
-  background-color: var(--desaturated-blue-main-background-1);
-}
-.main-body-2 {
-  background-color: var(--light-gray-main-background-2);
-}
-.main-body-3 {
-  background-color: var(--very-dark-main-background-3);
-}
+
 /* varibles */
 
 :root {
@@ -96,16 +89,12 @@ body {
 
 /* Main app styles */
 .app {
-  /* border: 0.05rem solid red; */
-
   height: 60rem;
   width: 32.5rem;
   max-height: 60rem;
   max-width: 32.5rem;
 }
 .header-app {
-  /* border: 0.1rem solid blue; */
-
   width: 100%;
   height: 5rem;
   max-height: 5rem;
@@ -178,23 +167,16 @@ body {
   position: relative;
   top: -0.3rem;
 }
-.theme-button button {
+.theme-button .th-btns {
   background-color: transparent;
   height: 1.3rem;
   width: 1.3rem;
   border-radius: 50%;
   scale: 1.2;
-}
-.th-active {
-  background-color: var(--red-key-background-toggle-1) !important;
-  height: 1.3rem;
-  width: 1.3rem;
-  border-radius: 50%;
-  scale: 1.2;
+  z-index: 99;
 }
 
 .screen-app {
-  /* border: 0.1rem solid orange; */
   background-color: var(--desaturated-blue-screen-background-1);
   width: 100%;
   height: 8.6rem;
@@ -227,15 +209,12 @@ body {
   font-size: 1rem;
 }
 .options-app {
-  /* border: 0.1rem solid cadetblue; */
   background-color: var(--desaturated-blue-toggle-keypad-background-1);
   width: 100%;
   height: 41.3rem;
   border-radius: 0.1rem;
 }
 .calc-container {
-  /* border: 0.1rem solid seagreen; */
-
   width: 100%;
   height: 100%;
   padding: 2.2rem 2.25rem 1.5rem 2.25rem;
@@ -244,8 +223,6 @@ body {
   justify-content: space-between;
 }
 .calc-options {
-  /* border: 0.1rem solid blueviolet; */
-
   width: 100%;
   height: 78%;
   display: grid;
@@ -289,8 +266,6 @@ body {
   font-size: 2.4rem;
 }
 .calc-and-reset-options {
-  /* border: 0.1rem solid skyblue; */
-
   width: 100%;
   height: 16.5%;
   position: relative;
